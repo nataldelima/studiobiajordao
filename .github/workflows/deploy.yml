@@ -1,0 +1,36 @@
+name: Deploy Studio Bia Jordão
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Deploy para InfinityFree
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Baixar código do repositório
+        uses: actions/checkout@v4
+
+      - name: Enviar arquivos para InfinityFree
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+
+          server-dir: /htdocs/
+
+          protocol: ftp
+
+          local-dir: ./
+
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/.github/**
+            README.md
