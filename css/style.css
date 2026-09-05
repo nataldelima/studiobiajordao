@@ -177,9 +177,20 @@ header.scrolled .header-container {
     color: var(--color-text-dark);
 }
 
+.logo a {
+    text-decoration: none;
+}
+
 .logo span {
     color: var(--color-accent);
     font-style: italic;
+}
+
+.logo img {
+    display: block;
+    width: auto;
+    height: clamp(40px, 5vw, 55px);
+    max-width: 240px;
 }
 
 .desktop-nav .nav-list {
