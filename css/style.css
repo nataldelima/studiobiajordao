@@ -189,8 +189,9 @@ header.scrolled .header-container {
 .logo img {
     display: block;
     width: auto;
-    height: clamp(40px, 5vw, 55px);
-    max-width: 240px;
+    height: 55px;
+    max-width: 220px;
+    object-fit: contain;
 }
 
 .desktop-nav .nav-list {
