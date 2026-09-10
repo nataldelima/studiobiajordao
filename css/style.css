@@ -613,9 +613,10 @@ footer {
 }
 
 .footer-container {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    gap: 3rem;
     margin-bottom: 40px;
 }
 
@@ -662,6 +663,28 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.8rem;
     opacity: 0.6;
+}
+
+.footer-credit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.footer-credit a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.footer-credit img {
+    display: block;
+    width: auto;
+    height: 28px;
+    max-width: none;
 }
 
 /* ==========================================================================
@@ -822,8 +845,29 @@ footer {
     }
 
     .footer-container {
-        grid-template-columns: 1fr;
+        flex-wrap: wrap;
         text-align: center;
+        gap: 2rem 0;
+    }
+
+    .footer-brand {
+        flex: 0 0 100%;
+    }
+
+    .footer-links,
+    .footer-social {
+        flex: 0 0 50%;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+
+    }
+
+    .footer img {
+        display: inline-flex;
     }
 
     .cta-final h2 {
@@ -863,5 +907,13 @@ footer {
     .hero-actions {
         flex-direction: column;
         gap: 0;
+    }
+
+    .footer-credit {
+        font-size: 0.75rem;
+    }
+
+    .footer-credit img {
+        height: 24px;
     }
 }
