@@ -682,7 +682,7 @@ footer {
 
 .footer-credit img {
     display: block;
-    width: auto;
+    width: 28px;
     height: 28px;
     max-width: none;
 }
